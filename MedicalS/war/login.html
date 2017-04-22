@@ -1,0 +1,75 @@
+<!doctype html>
+<!-- The DOCTYPE declaration above will set the     -->
+<!-- browser's rendering engine into                -->
+<!-- "Standards Mode". Replacing this declaration   -->
+<!-- with a "Quirks Mode" doctype is not supported. -->
+
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <!--                                                               -->
+    <!-- Consider inlining CSS to reduce the number of requested files -->
+    <!--                                                               -->
+    <link type="text/css" rel="stylesheet" href="StockWatcher.css">
+
+    <!--                                           -->
+    <!-- Any title is fine                         -->
+    <!--                                           -->
+    <title>Login</title>
+    
+    <!--                                           -->
+    <!-- This script loads your compiled module.   -->
+    <!-- If you add any GWT meta tags, they must   -->
+    <!-- be added before this line.                -->
+    <!--                                           -->
+    <script type="text/javascript" language="javascript" src="stockwatcher/stockwatcher.nocache.js"></script>
+  </head>
+
+  <!--                                           -->
+  <!-- The body can have arbitrary html, or      -->
+  <!-- you can leave the body empty if you want  -->
+  <!-- to create a completely dynamic UI.        -->
+  <!--                                           -->
+  <body align="center"> <br> <hr> <br>
+    <img src= "img/logof.png"  width=130 height=130  />
+	<!--<img src= "images/descarga.png" width=140 height=140 />
+    <!-- RECOMMENDED if your web app will not function without JavaScript enabled -->
+    <noscript>
+      <div style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif">
+        Your web browser must have JavaScript enabled
+        in order for this application to display correctly.
+      </div>
+    </noscript>
+
+    <h1 style="color:#009900;"> Medical Service  </h1>
+
+    <table align="center" style="background-color:#000066;">
+      <tr style="color:white; " width="100px" height="100px">
+        <td colspan="20" style="font-weight:bold;" align="center" > Iniciar Sesion </td>        
+      </tr>
+      <tr>
+        <td id="nameFieldContainer" align="center" width=75 height=50>
+          <input type="text" placeholder="Usuario">  
+        </td>
+      </tr>
+        <td id="passwordFieldContainer" align="center" width=200 height=50>
+        <input type="password" placeholder="Password">
+        </td>
+      </tr>
+    
+	<tr>
+        <td  align="center" width=50 height=75>
+         <input type="submit" value="Entrar">	
+        </td>
+      </tr>
+
+       <tr style="color:white; " >
+        <td style="font-weight:bold;" align="center" > <a href="MedicalS.html">Registrar nuevo usuario</a> </td>        
+       </tr>
+      <tr>
+        <td colspan="2" style="color:red;" id="errorLabelContainer"></td>
+      </tr>
+    </table>
+  </body>
+</html>
