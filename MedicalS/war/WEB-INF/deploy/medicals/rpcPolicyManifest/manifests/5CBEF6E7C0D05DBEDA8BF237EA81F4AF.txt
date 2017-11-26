@@ -1,0 +1,2 @@
+serviceClass: com.hwongu.MedicalS.client.GreetingService
+path: 01714C0F93F2DCC217BFCA124561C96B.gwt.rpc
