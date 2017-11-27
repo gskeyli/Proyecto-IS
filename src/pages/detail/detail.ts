@@ -28,24 +28,27 @@ export class DetailPage {
   constructor(public cliServ: ClinicaService, public navCtrl: NavController, public navParams: NavParams, public db: AngularFireDatabase) {
     this.uid = navParams.get("uid");
     console.log( this.uid )
-   
-    
-   
-   
-     this.db.list('clinicas/', ref => ref).valueChanges().subscribe(datas =>{
-      this.espec = datas;
-      console.log(this.espec);
-    });
-    /*for(var i in this.espec) {
+   this.db.list('clinicas/', ref => ref.orderByChild("uid").equalTo(this.uid)).valueChanges().subscribe(datas =>{
+   // firebase.database().ref("clinicas/").once("value")
+     // .then(function(snapshot) {
+       // var key = snapshot.key; // "ada"
+    this.espec = datas;
+    console.log(datas)      
+    //console.log(snapshot.val());
+  
+   /* for(var i in key) {
       var arr= [];
       arr.push({
-       name : this.espec[i].payload.val(),
-       espe: this.espec[i].payload.val(),
-       uid: this.espec[i].payload.val()
+        name : this.key[i].name,
+       espe:this.key[i].espe,
+       uid: this.key[i].uid
       })
       this.espec = arr;
-    } */  
+      console.log( this.key[i].name);
+   } */ 
+  });  
   
+   
         
           
   }
