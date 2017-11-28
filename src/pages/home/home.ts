@@ -23,16 +23,26 @@ export class HomePage {
   clinicas_ar =[] ;
  
  @ViewChild('myNav') nav: NavController
- 
+ userId:string;
 
 
 
   constructor(private afAuth:AngularFireAuth, public navCtrl: NavController, public navParams: NavParams, private db: AngularFireDatabase,
   ) {
+    this.afAuth.authState.subscribe(user => {
+      if(user) this.userId = user.uid
+      console.log(this.userId)
+    
+  this.db.list('users/', ref => ref.orderByChild("uid").equalTo(this.userId)).valueChanges().subscribe(datas =>{
+    this.array = datas;
+    console.log( this.array);
+    }); 
+  })
     
    //this.clinicas_ar = cliServ.getClinica(); 
   this.db.list('clinicas/').valueChanges().subscribe(data =>{
     this.clinicas_ar = data;
+    
     //console.log(this.clinicas_ar);
     });
     

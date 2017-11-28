@@ -18,6 +18,9 @@
     <button ion-item *ngFor="let clinica of clinicas_ar" (click)="goToDetail(clinica.uid)">
      {{clinica.name}}
     </button>  
+    <button ion-item *ngFor="let i of array" (click)="goToDetail(clinica.uid)">
+      {{i.name}}
+     </button>  
   </ion-list>
 
   <!--ion-list>

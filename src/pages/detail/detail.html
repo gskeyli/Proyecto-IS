@@ -17,6 +17,14 @@
   <ion-list inset>
     <button ion-item *ngFor="let i of espec" (click)="goToEspe()">
       {{i.espe}}
-    </button> 
+    </button>
+    
+    <button class="seguros" ion-item *ngFor="let a of espec" (click)="goToEspe()">
+      <h1>Seguros asociados</h1>
+      {{ a.seguro }}
+    </button>
+    
+    
+ 
   </ion-list>
 </ion-content>
