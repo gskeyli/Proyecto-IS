@@ -6,12 +6,6 @@ import  * as firebase from 'firebase';
 import {Observable} from 'rxjs/Observable';
 import { FirebaseListObservable } from 'angularfire2/database-deprecated'
 
-/**
- * Generated class for the DetailPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -35,36 +29,15 @@ export class DetailPage {
     this.espec = datas;
     console.log(datas)      
     //console.log(snapshot.val());
-  
-   /* for(var i in key) {
-      var arr= [];
-      arr.push({
-        name : this.key[i].name,
-       espe:this.key[i].espe,
-       uid: this.key[i].uid
-      })
-      this.espec = arr;
-      console.log( this.key[i].name);
-   } */ 
   });  
-  
-   
-        
-          
+                 
   }
-
-
-  
-
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DetailPage');
-  
+
   }
  
-  
-
-
   goToEspe(){
     this.navCtrl.push('EspeDetailPage');
   }
