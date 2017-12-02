@@ -15,16 +15,15 @@
 
 <ion-content>
   <ion-list inset>
-    <button ion-item *ngFor="let i of espec" (click)="goToEspe()">
+    <button ion-item *ngFor="let i of espec" >
       {{i.espe}}
+    </button> 
+    <button class="seguros" ion-item *ngFor="let a of espec">
+      <h2><strong> Seguros asociados</strong></h2>
+     <br> {{ a.seguro.s1 }}<br/>
+     <br> {{ a.seguro.s2 }}<br/>
+     <br>  {{ a.seguro.s3 }}<br/>
     </button>
-    
-    <button class="seguros" ion-item *ngFor="let a of espec" (click)="goToEspe()">
-      <h1>Seguros asociados</h1>
-      {{ a.seguro }}
-    </button>
-    
-    
- 
+    <button ion-button block (click)="goToEspe()">Gestionar Cita</button>
   </ion-list>
 </ion-content>

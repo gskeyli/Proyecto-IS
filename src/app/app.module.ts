@@ -5,7 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
-
+import { NgCalendarModule  } from 'ionic2-calendar';
 //firebase
 import { AngularFireModule } from 'angularfire2';
 import { firebaseConfig } from './app.firebase.config';
@@ -15,6 +15,7 @@ import { ClinicaService } from '../services/clinica.service';
 import { LoginPage } from '../pages/login/login';
 import { HomePage } from '../pages/home/home';
 import { DetailPage } from '../pages/detail/detail';
+
 //
 
 @NgModule({
@@ -22,15 +23,17 @@ import { DetailPage } from '../pages/detail/detail';
     MyApp,
     LoginPage,
     DetailPage,
-    
-     
+  
+  
   ],
   imports: [
     BrowserModule,
+    NgCalendarModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+ 
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -43,7 +46,8 @@ import { DetailPage } from '../pages/detail/detail';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ClinicaService
+    ClinicaService,
+ 
   ]
 })
 export class AppModule {}
